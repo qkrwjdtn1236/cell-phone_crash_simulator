@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class isScreenCrash : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class isScreenCrash : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other){
-        Debug.Log("액정 크랙");
+        if(other.tag ==  "plane"){
+            Debug.Log("액정 크랙");
+            SceneManager.LoadScene("SampleScene");
+        }
+        
     }
 }
