@@ -22,6 +22,5 @@ public class isScreenCrash : MonoBehaviour
             Debug.Log("액정 크랙");
             SceneManager.LoadScene("SampleScene");
         }
-        
     }
 }

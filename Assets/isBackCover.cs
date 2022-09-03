@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class isBackCover : MonoBehaviour
 {
+    bool isTrigger;
     // Start is called before the first frame update
     void Start()
     {
-        
+        isTrigger = false;
     }
 
     // Update is called once per frame
@@ -20,6 +21,7 @@ public class isBackCover : MonoBehaviour
     private void OnTriggerEnter(Collider other){
         if(other.tag ==  "plane")
         {
+            isTrigger = true;
             Debug.Log("액정 안깨짐");
             SceneManager.LoadScene("SampleScene");
         }  
